@@ -1,94 +1,234 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <!-- The name of the application -->
     <string name="app_name">Capital Cities Quiz</string>
 
-    <!-- The first question what is the capital of Australia -->
+    <!-- The first question what is the capital of Australia, a text view inside a card view with
+    the answers beneath in a radio group (only one answer is correct)
+    located inside another card view -->
     <string name="australia">What is the capital city of Australia ?</string>
-    <!-- The city Melbourne -->
+
+    <!-- The first answer option the city Melbourne radio button -->
     <string name="melbourne">Melbourne</string>
-    <!-- The city Sydney -->
+
+    <!-- The second answer option the city Sydney radio button -->
     <string name="sydney">Sydney</string>
-    <!-- The city Canberra -->
+
+    <!-- The correct answer option the city Canberra radio button -->
     <string name="canberra">Canberra</string>
-    <!-- The city Perth -->
+
+    <!-- The fourth answer option the city Perth radio button -->
     <string name="perth">Perth</string>
 
-    <!-- The second question the most visited capitals -->
-    <string name="most_visited">which capital city is the most visited capital in the world by tourists ?</string>
-    <!-- The city Paris -->
+    <!-- The second question the most visited capitals, a text view inside a card view with
+    the answers beneath in a radio group (only one answer is correct)
+    located inside another card view -->
+    <string name="most_visited">Which capital city is the most visited capital
+        in the world by tourists ?</string>
+
+    <!-- The first answer option the city Paris radio button -->
     <string name="paris">Paris</string>
-    <!-- The city London -->
+
+    <!-- The second answer option the city London radio button -->
     <string name="london">London</string>
-    <!-- The city Bangkok -->
+
+    <!-- The correct answer option the city Bangkok radio button -->
     <string name="bangkok">Bangkok</string>
-    <!-- The city Beijing -->
+
+    <!-- The fourth answer option the city Beijing radio button -->
     <string name="beijing">Beijing</string>
-    <!-- The city New York -->
+
+    <!-- The fifth answer option the city New York radio button -->
     <string name="new_york">New York</string>
 
-    <!-- The third question capital cities of Bolivia -->
-    <string name="bolivia">which cities are the capital cities of Bolivia ?</string>
-    <!-- The city La Paz -->
+    <!-- The third question capital cities of Bolivia, a text view inside a card view with
+    the answers grouped together beneath in a linear layout view group
+    located inside another card view (have to mark 2 answers to have
+    the question marked as correct) -->
+    <string name="bolivia">Which cities are the capital cities of Bolivia ?</string>
+
+    <!-- The first correct answer option the city La Paz checkbox -->
     <string name="la_paz">La Paz</string>
-    <!-- The city Santa Cruz -->
+
+    <!-- The second answer option the city Santa Cruz checkbox -->
     <string name="santa_cruz">Santa Cruz</string>
-    <!-- The city Sucre -->
+
+    <!-- The third answer option the city Sucre checkbox -->
     <string name="sucre">Sucre</string>
-    <!-- The city Cochabamba -->
+
+    <!-- The fourth answer option the second correct answer the city Cochabamba checkbox -->
     <string name="cochabamba">Cochabamba</string>
 
-    <!-- The fourth question the name of Budapest -->
-    <string name="budapest">why is the capital city of Hungary called Budapest ?</string>
+    <!-- The fourth question the name of Budapest, a text view inside a card view with
+    the answer edit text input box beneath located inside another card view
+    (an edit text answer open question that has to contain selected words) -->
+    <string name="budapest">Why is the capital city of Hungary called Budapest ?</string>
+
     <!-- Budapest open question answer text hint -->
     <string name="budapest_hint">Its made of two cities</string>
 
-    <!-- The fifth question the biggest land size capital -->
-    <string name="biggest_land_size">What is the biggest capital city of the world in term of land area ?</string>
-    <!-- The city Berlin -->
+    <!-- The fifth question the biggest land size capital, a text view inside a card view with
+    the answers beneath in a radio group (only one answer is correct)
+    located inside another card view -->
+    <string name="biggest_land_size">What is the biggest capital city of the world
+        in term of land area ?</string>
+
+    <!-- The first answer option the city Berlin radio button -->
     <string name="berlin">Berlin</string>
-    <!-- The city Tokyo -->
+
+    <!-- The correct answer option the city Tokyo radio button -->
     <string name="tokyo">Tokyo</string>
-    <!-- The city Mexico City -->
+
+    <!-- The fourth answer option the city Mexico City radio button -->
     <string name="mexico_city">Mexico City</string>
-    <!-- The city Buenos Aires -->
+
+    <!-- The fifth answer option the city Buenos Aires radio button -->
     <string name="buenos_aires">Buenos Aires</string>
 
-    <!-- The sixth question the past capital cities of Brazil -->
-    <string name="brazil">what cities were the capital cities of Brazil since the start of the colonization ?</string>
-    <!-- The city Rio -->
+    <!-- The sixth question the past capital cities of Brazil, a text view inside a card view with
+    the answers grouped together beneath in a linear layout view group
+    located inside another card view (have to mark 3 answers to have
+    the question marked as correct) -->
+    <string name="brazil">What cities were the capital cities of Brazil
+        since the start of the colonization ?</string>
+
+    <!-- The first correct answer option the city Rio de Janeiro checkbox -->
     <string name="rio">Rio de Janeiro</string>
-    <!-- The city Sao Paulo -->
+
+    <!-- The second answer option the city Sao Paulo checkbox -->
     <string name="paulo">Sao Paulo</string>
-    <!-- The city Recife -->
+
+    <!-- The third answer option the city Recife checkbox -->
     <string name="recife">Recife</string>
-    <!-- The city Brasilia -->
+
+    <!-- The fourth answer option and the second correct answer the city Brasilia checkbox -->
     <string name="brasilia">Brasilia</string>
-    <!-- The city Belo Horizonte -->
-    <string name="horizonte">Belo Horizonte</string>
-    <!-- The city Salvador -->
+
+    <!-- The fifth answer option and the third correct answer the city Salvador checkbox -->
     <string name="salvador">Salvador</string>
 
-    <!-- The seventh question the capital of Switzerland -->
-    <string name="switzerland">what is the capital city of Switzerland ?</string>
-    <!-- Switzerland capital open question answer text hint -->
-    <string name="switzerland_hint">De jure ... and de facto ...</string>
+    <!-- The seventh question the capital of Switzerland, a text view inside a card view with
+    the answer edit text input box beneath located inside another card view
+    (an edit text answer open question that has to contain selected words) -->
+    <string name="switzerland">What is the capital city of Switzerland ?</string>
 
-    <!-- The eight question the unification of Berlin -->
+    <!-- Switzerland capital open question answer text hint -->
+    <string name="switzerland_hint">De jure &#8230; and de facto &#8230;</string>
+
+    <!-- The eight question the unification of Berlin, a text view inside a card view with
+    the answers beneath in a radio group (only one answer is correct)
+    located inside another card view -->
     <string name="germany">When was the unification of Berlin ?</string>
-    <!-- The year 1871 -->
+
+    <!-- The first answer option the year 1871 radio button -->
     <string name="year_1">1871</string>
-    <!-- The year 1991 -->
+
+    <!-- The second answer option the year 1991 radio button -->
     <string name="year_2">1991</string>
-    <!-- The year 1990 -->
+
+    <!-- The correct answer option the year 1990 radio button -->
     <string name="year_3">1990</string>
-    <!-- The year 1948 -->
+
+    <!-- The fourth answer option the year 1948 radio button -->
     <string name="year_4">1948</string>
 
-    <!-- The ninth question China's capital -->
+    <!-- The ninth question China's capital, a text view inside a card view with
+    the answer edit text input box beneath located inside another card view
+    (an edit text answer open question that has to contain selected words) -->
     <string name="china">The capital city of China is the biggest city of the country ?</string>
+
     <!-- China open question answer text hint -->
     <string name="china_hint">Yes or no</string>
 
-    <!-- Submit quiz button -->
+    <!-- Text on a button to submit the quiz, the button is located on the bottom of the screen in
+     the main activity (the quiz) -->
     <string name="submit">Submit Quiz</string>
+
+    <!-- Text on a button to restart the quiz, the button is located on the bottom of the screen in
+     the main activity (the quiz) but shows up only when the user check the answers or check
+     the solution -->
+    <string name="restart">Try Again</string>
+
+    <!-- A text string that summarize the quiz score and the number of correct answers,
+    where quiz score number and the correct answers number are placeholders for an int variables,
+    the string used in a toast message and as a summery text in a text view
+    located beneath the congratulations text in the summary menu activity -->
+    <string name="summary_perfect">Your score is <xliff:g id="quiz_score">%1$d</xliff:g>
+        based on <xliff:g id="correct_answers">%2$d</xliff:g> correctly answered questions
+            \nTap yourself on your back, great job !</string>
+
+    <!-- A text string that extends the summary_perfect string in case the user answered everything
+    but had any amount of wrong answers marked,
+    where the wrong answers number is a placeholder for an int variable -->
+    <string name="summary_mistakes">\nYou also had <xliff:g id="mistakes">%1$d</xliff:g>
+        wrong answers</string>
+
+    <!-- A text string that extends the summary_perfect string in case the user had no mistakes
+    but had any amount of ignored questions,
+    where the ignored questions number is a placeholder for an int variable -->
+    <string name="summary_no_answers">\nYou also had <xliff:g id="ignored_questions">%1$d</xliff:g>
+        ignored questions</string>
+
+    <!-- A text string that extends the summary_mistakes string in case
+    the user had any amount of mistakes and any amount of ignored questions,
+    where the ignored questions number is a placeholder for an int variable -->
+    <string name="summary_worse">\nAnd, <xliff:g id="ignored_questions">%1$d</xliff:g>
+        ignored questions !</string>
+
+    <!-- The right answer to be shown in Budapest edit text when the see solution method is called -->
+    <string name="budapest_answer">Because its made of two cities, Buda and Pest.</string>
+
+    <!-- The right answer to be shown in Switzerland edit text when the see solution method is called -->
+    <string name="switzerland_answer">Switzerland doesn"'"t have a de jure capital
+        but Bern is the de facto capital.</string>
+
+    <!-- The right answer to be shown in China edit text when the see solution method is called -->
+    <string name="china_answer">No, Shanghai is the biggest city in China.</string>
+
+    <!-- A congratulations text for submitting the quiz with
+    a placeholder for the user name edit text input param,
+    located at the top of the summary menu activity -->
+    <string name="congrats">Congratulations
+        \n<xliff:g id="user_name">%1$s </xliff:g> !</string>
+
+    <!-- Question that ask the user what he wants to do where there are multiple buttons afterwards,
+     located beneath the summary text -->
+    <string name="to_do">What would you like to do ?</string>
+
+    <!-- Text on a button to restart the quiz,
+    the button is part of a 4 buttons menu set in the summary menu activity -->
+    <string name="try_again">Try again</string>
+
+    <!-- Text on a button to check the user answers,
+     the button is part of a 4 buttons menu set in the summary menu activity -->
+    <string name="check">Check your answers</string>
+
+    <!-- Text on a button to check the user answers and show the right answers,
+     the button is part of a 4 buttons menu set in the summary menu activity -->
+    <string name="solution">See Solution</string>
+
+    <!-- Text on a button to exit the app,
+     the button is part of a 4 buttons menu set in the summary menu activity -->
+    <string name="exit">Exit</string>
+
+    <!-- Title explanation of the app, located beneath the name of the app in the launch screen -->
+    <string name="explanation">A not ordinary questioner about capital cities of the world</string>
+
+    <!-- Text hint for the edit text field asks for the user name,
+     located beneath the title explanation in the launch screen -->
+    <string name="name_hint">Your Name</string>
+
+    <!-- Text on a button to start the quiz,
+    located beneath the user name edit text in the launch screen -->
+    <string name="start_quiz">Start Quiz</string>
+
+    <!-- A note explaining how to answer the multiple answers questions,
+    located on the bottom of the launch screen -->
+    <string name="note">Note: in a multiple answers questions, a correct answer point is gained
+        only if all of the right answers are marked !,
+        \nPlus its enough to have one faulty answer marked to disqualify the entire question.</string>
+
+    <!-- Short text shown as an error message on the edit text if nothing is written -->
+    <string name="name_error">Please write your name !</string>
+
 </resources>

@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.capitalcitiesquiz.SummaryMenu">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vatican" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_white" />
+
+    <TextView
+        android:id="@+id/starter_header"
+        style="@style/questions"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/transparent_white"
+        android:text="@string/app_name"
+        android:textAllCaps="true"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/starter_explanation"
+        style="@style/questions"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/starter_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/transparent_white"
+        android:text="@string/explanation"
+        android:textColor="@color/colorPrimary"
+        android:textSize="23sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/starter_name_et"
+        android:layout_alignEnd="@id/starter_name_et"
+        android:layout_alignLeft="@+id/starter_name_et"
+        android:layout_alignRight="@+id/starter_name_et"
+        android:layout_alignStart="@id/starter_name_et"
+        android:layout_alignTop="@+id/starter_name_et"
+        android:background="@color/transparent_white" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/starter_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/starter_explanation"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:hint="@string/name_hint"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine|textCapWords"
+        android:maxLines="3"
+        android:scrollHorizontally="false"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:textCursorDrawable="@null" />
+
+    <Button
+        android:id="@+id/starter_btn"
+        style="@style/buttons"
+        android:layout_below="@id/starter_name_et"
+        android:onClick="startQuiz"
+        android:text="@string/start_quiz" />
+
+    <TextView
+        android:id="@+id/starter_note"
+        style="@style/answers"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent_white"
+        android:text="@string/note"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.capitalcitiesquiz.SummaryMenu">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/capitol" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_white" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_toEndOf="@+id/gratsHeader"
+        android:layout_toRightOf="@+id/gratsHeader"
+        android:scaleType="fitStart"
+        android:src="@drawable/grats_port" />
+
+    <TextView
+        android:id="@+id/gratsHeader"
+        style="@style/questions"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent_white"
+        android:text="@string/congrats" />
+
+    <TextView
+        android:id="@+id/summary"
+        style="@style/answers"
+        android:layout_below="@id/gratsHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparent_white"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/to_do"
+        style="@style/answers"
+        android:layout_below="@id/summary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent_white"
+        android:gravity="center"
+        android:text="@string/to_do"
+        android:textColor="@android:color/black"
+        android:textStyle="normal" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/to_do"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/try_again"
+                style="@style/buttons"
+                android:layout_alignEnd="@+id/check"
+                android:layout_alignLeft="@+id/check"
+                android:layout_alignRight="@+id/check"
+                android:layout_alignStart="@+id/check"
+                android:onClick="restart"
+                android:text="@string/try_again" />
+
+            <Button
+                android:id="@+id/check"
+                style="@style/buttons"
+                android:layout_below="@id/try_again"
+                android:onClick="checkAnswers"
+                android:text="@string/check" />
+
+            <Button
+                android:id="@+id/solution"
+                style="@style/buttons"
+                android:layout_alignEnd="@id/check"
+                android:layout_alignLeft="@id/check"
+                android:layout_alignRight="@id/check"
+                android:layout_alignStart="@id/check"
+                android:layout_below="@id/check"
+                android:onClick="seeAnswers"
+                android:text="@string/solution" />
+
+            <Button
+                android:id="@+id/exit"
+                style="@style/buttons"
+                android:layout_alignEnd="@id/check"
+                android:layout_alignLeft="@id/check"
+                android:layout_alignRight="@id/check"
+                android:layout_alignStart="@id/check"
+                android:layout_below="@id/solution"
+                android:onClick="exit"
+                android:text="@string/exit" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

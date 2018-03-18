@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- Primary color of the app shown in the app bar and as the buttons background -->
+    <color name="colorPrimary">#78909c</color>
+
+    <!-- Primary dark color of the app shown in the status bar -->
+    <color name="colorPrimaryDark">#37474f</color>
+
+    <!-- Accent color of the app shown inside buttons -->
+    <color name="colorAccent">#ffffff</color>
+
+    <!-- Transparent white color usually used as a background of many views -->
+    <color name="transparent_white">#90ffffff</color>
+
 </resources>

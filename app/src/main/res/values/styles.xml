@@ -3,13 +3,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#78909c</item>
-        <item name="colorPrimaryDark">#37474f</item>
-        <item name="colorAccent">#ffffff</item>
-        <item name="colorButtonNormal">#78909c</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
     </style>
 
-    <!-- Style for questions textview using TextAppearance large as a parent -->
+    <!-- Style for questions text view using TextAppearance large as a parent -->
     <style name="questions" parent="TextAppearance.AppCompat.Large">
         <!-- Set the size of the text to 20sp -->
         <item name="android:textSize">20sp</item>
@@ -19,6 +19,16 @@
         <item name="android:fontFamily">sans-serif-big</item>
         <!-- Set the text gravity to center horizontal -->
         <item name="android:gravity">center_horizontal</item>
+        <!-- Set the width to match parent -->
+        <item name="android:layout_width">match_parent</item>
+        <!-- Set the height to wrap content -->
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Set a left margin to 5dp -->
+        <item name="android:layout_marginLeft">5dp</item>
+        <!-- Set a right margin to 5dp -->
+        <item name="android:layout_marginRight">5dp</item>
+        <!-- Set a top margin to 5dp -->
+        <item name="android:layout_marginTop">5dp</item>
     </style>
 
     <!-- Style for answers text using TextAppearance medium as a parent -->
@@ -31,19 +41,108 @@
         <item name="android:fontFamily">sans-serif-medium</item>
         <!-- Set text color to white -->
         <item name="android:textColor">@android:color/white</item>
+        <!-- Set button tint color to white-->
         <item name="android:buttonTint">@android:color/white</item>
-    </style>
-
-    <!-- Style for CheckBoxes -->
-    <style name="checkbox" parent="Theme.AppCompat.Light">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:buttonTint">@android:color/white</item>
+        <!-- Set the width to wrap content -->
+        <item name="android:layout_width">wrap_content</item>
+        <!-- Set the height to wrap content -->
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <!-- Style for buttons -->
     <style name="buttons" parent="Widget.AppCompat.Button">
+        <!-- Set the text color to white -->
         <item name="android:textColor">@android:color/white</item>
+        <!-- Caps all characters -->
         <item name="textAllCaps">true</item>
+        <!-- Set the width to wrap content -->
+        <item name="android:layout_width">wrap_content</item>
+        <!-- Set the height to wrap content -->
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Set a bottom margin to 10dp -->
+        <item name="android:layout_marginBottom">10dp</item>
+        <!-- Set a top margin to 10 dp -->
+        <item name="android:layout_marginTop">10dp</item>
+        <!-- Center horizontal in the layout -->
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <!-- Style for card views containing questions and answers -->
+    <style name="questions_card">
+        <!-- Set the width to match parent -->
+        <item name="android:layout_width">match_parent</item>
+        <!-- Set the height to wrap content -->
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Changes the card background color -->
+        <item name="cardBackgroundColor">@color/transparent_white</item>
+        <!-- Set the radios of the card corners to 15dp -->
+        <item name="cardCornerRadius">15dp</item>
+        <!-- Set a card elevation to 10dp -->
+        <item name="cardElevation">10dp</item>
+        <!-- Set the card max elevation to 20dp -->
+        <item name="cardMaxElevation">20dp</item>
+        <!-- Prevent corners overlap -->
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="contentPadding">10dp</item>
+    </style>
+
+    <!-- Style for card view containing an answers group extends the questions card style -->
+    <style name="answers_card" parent="questions_card">
+        <!-- Set the width to wrap content -->
+        <item name="android:layout_width">wrap_content</item>
+        <!-- Center horizontal in the layout -->
+        <item name="android:layout_gravity">center_horizontal</item>
+        <!-- Changes the card background color -->
+        <item name="cardBackgroundColor">#9937474f</item>
+        <!-- Set the card max elevation to 10dp -->
+        <item name="cardMaxElevation">10dp</item>
+        <!-- Set a bottom padding to 5dp -->
+        <item name="contentPaddingBottom">5dp</item>
+        <!-- Set a left padding to 10dp -->
+        <item name="contentPaddingLeft">10dp</item>
+        <!-- Set a right padding to 10dp -->
+        <item name="contentPaddingRight">10dp</item>
+        <!-- Set a top padding to 15dp -->
+        <item name="contentPaddingTop">15dp</item>
+    </style>
+
+    <!-- Style for radio groups -->
+    <style name="answer_group">
+        <!-- Set the width to wrap content -->
+        <item name="android:layout_width">wrap_content</item>
+        <!-- Set the height to wrap content -->
+        <item name="android:layout_height">wrap_content</item>
+        <!-- Changes the background to a drawable -->
+        <item name="android:background">@drawable/border</item>
+        <!-- Changes the orientation to vertical -->
+        <item name="android:orientation">vertical</item>
+        <!-- Set a right padding to 15dp to better support APIs higher than API17 -->
+        <item name="android:paddingEnd">15dp</item>
+        <!-- Set a right padding to 15dp to better support APIs lower than API17 -->
+        <item name="android:paddingRight">15dp</item>
+        <!-- Set a left padding to 15dp to better support APIs higher than API17 -->
+        <item name="android:paddingStart">15dp</item>
+        <!-- Set a left padding to 15dp to better support APIs lower than API17 -->
+        <item name="android:paddingLeft">15dp</item>
+    </style>
+
+    <!-- Style for edit text fields extends the answers style-->
+    <style name="et_style" parent="answers">
+        <!-- Set the width to wrap content -->
+        <item name="android:layout_width">match_parent</item>
+        <!-- Set the left margin to 5dp -->
+        <item name="android:layout_marginLeft">5dp</item>
+        <!-- Set the right margin to 5dp -->
+        <item name="android:layout_marginRight">5dp</item>
+        <!-- Changes the background to a drawable -->
+        <item name="android:background">@drawable/border</item>
+        <!-- Changes the keyboard action key to done -->
+        <item name="android:imeOptions">actionDone</item>
+        <!-- Set the input type to text on multiple lines -->
+        <item name="android:inputType">textMultiLine</item>
+        <!-- Prevent the edit text field from scrolling -->
+        <item name="android:scrollHorizontally">false</item>
     </style>
 
 </resources>

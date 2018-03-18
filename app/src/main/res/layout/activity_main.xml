@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,417 +29,389 @@
     <Button
         android:id="@+id/submit_quiz_btn"
         style="@style/buttons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"
-        android:text="@string/submit"
-        android:onClick="submitQuiz"/>
+        android:onClick="submitQuiz"
+        android:text="@string/submit" />
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/submit_quiz_btn"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="30dp"
-            android:background="#99ffffff"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/transparent_white"
             android:orientation="vertical">
 
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:text="@string/australia" />
+            <android.support.v7.widget.CardView style="@style/questions_card">
 
-            <RadioGroup
-                android:id="@+id/australia_rg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:paddingRight="10dp"
-                android:paddingEnd="10dp"
-                android:paddingLeft="10dp"
-                android:paddingStart="10dp">
-
-                <RadioButton
-                    android:id="@+id/melbourne_cptl_australia"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/melbourne"
-                    android:textColor="@android:color/white" />
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/sydney_cptl_australia"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/australia" />
+
+                    <android.support.v7.widget.CardView style="@style/answers_card">
+
+                        <RadioGroup
+                            android:id="@+id/australia_rg"
+                            style="@style/answer_group">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/melbourne_cptl_australia"
+                                style="@style/answers"
+                                android:text="@string/melbourne" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/sydney_cptl_australia"
+                                style="@style/answers"
+                                android:text="@string/sydney" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/canberra_cptl_australia"
+                                style="@style/answers"
+                                android:text="@string/canberra" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/perth_cptl_australia"
+                                style="@style/answers"
+                                android:text="@string/perth" />
+
+                        </RadioGroup>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/questions_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/sydney" />
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/canberra_cptl_australia"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/most_visited" />
+
+                    <android.support.v7.widget.CardView style="@style/answers_card">
+
+                        <RadioGroup
+                            android:id="@+id/most_visited_rg"
+                            style="@style/answer_group">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/paris_most_visited"
+                                style="@style/answers"
+                                android:text="@string/paris" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/london_most_visited"
+                                style="@style/answers"
+                                android:text="@string/london" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/bangkok_most_visited"
+                                style="@style/answers"
+                                android:text="@string/bangkok" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/beijing_most_visited"
+                                style="@style/answers"
+                                android:text="@string/beijing" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/new_york_most_visited"
+                                style="@style/answers"
+                                android:text="@string/new_york" />
+
+                        </RadioGroup>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/questions_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/canberra" />
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/perth_cptl_australia"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/bolivia" />
+
+                    <android.support.v7.widget.CardView style="@style/answers_card">
+
+                        <LinearLayout
+                            android:id="@+id/bolivia_ll"
+                            style="@style/answer_group">
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/la_paz_cptl_bolivia"
+                                style="@style/answers"
+                                android:text="@string/la_paz" />
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/santa_cruz_cptl_bolivia"
+                                style="@style/answers"
+                                android:text="@string/santa_cruz" />
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/cochabamba_cptl_bolivia"
+                                style="@style/answers"
+                                android:text="@string/cochabamba" />
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/sucre_cptl_bolivia"
+                                style="@style/answers"
+                                android:text="@string/sucre" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/questions_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/perth" />
-            </RadioGroup>
+                    android:orientation="vertical">
 
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/most_visited" />
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/budapest" />
 
-            <RadioGroup
-                android:id="@+id/most_visited_rg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:paddingRight="10dp"
-                android:paddingEnd="10dp"
-                android:paddingLeft="10dp"
-                android:paddingStart="10dp">
+                    <android.support.v7.widget.CardView style="@style/answers_card">
 
-                <RadioButton
-                    android:id="@+id/paris_most_visited"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                        <EditText
+                            android:id="@+id/budapest_et"
+                            style="@style/et_style"
+                            android:hint="@string/budapest_hint"
+                            android:maxLines="5" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/questions_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/paris" />
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/london_most_visited"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/biggest_land_size" />
+
+                    <android.support.v7.widget.CardView style="@style/answers_card">
+
+                        <RadioGroup
+                            android:id="@+id/biggest_land_size_rg"
+                            style="@style/answer_group">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/berlin_land_size"
+                                style="@style/answers"
+                                android:text="@string/berlin" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/beijing_land_size"
+                                style="@style/answers"
+                                android:text="@string/beijing" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/tokyo_land_size"
+                                style="@style/answers"
+                                android:text="@string/tokyo" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/mexico_city_land_size"
+                                style="@style/answers"
+                                android:text="@string/mexico_city" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/buenos_aires_land_size"
+                                style="@style/answers"
+                                android:text="@string/buenos_aires" />
+
+                        </RadioGroup>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/questions_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/london" />
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/bangkok_most_visited"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/brazil" />
+
+                    <android.support.v7.widget.CardView style="@style/answers_card">
+
+                        <LinearLayout
+                            android:id="@+id/brazil_ll"
+                            style="@style/answer_group">
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/rio_cptl_brazil"
+                                style="@style/answers"
+                                android:text="@string/rio" />
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/paulo_cptl_brazil"
+                                style="@style/answers"
+                                android:text="@string/paulo" />
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/recife_cptl_brazil"
+                                style="@style/answers"
+                                android:text="@string/recife" />
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/brasilia_cptl_brazil"
+                                style="@style/answers"
+                                android:text="@string/brasilia" />
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/salvador_cptl_brazil"
+                                style="@style/answers"
+                                android:text="@string/salvador" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/questions_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/bangkok" />
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/beijing_most_visited"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/switzerland" />
+
+                    <android.support.v7.widget.CardView style="@style/answers_card">
+
+                        <EditText
+                            android:id="@+id/switzerland_et"
+                            style="@style/et_style"
+                            android:hint="@string/switzerland_hint"
+                            android:maxLines="6" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView style="@style/questions_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/beijing" />
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/new_york_most_visited"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/germany" />
+
+                    <android.support.v7.widget.CardView style="@style/answers_card">
+
+                        <RadioGroup
+                            android:id="@+id/unification_berlin_rg"
+                            style="@style/answer_group">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/year_1_unification_berlin"
+                                style="@style/answers"
+                                android:text="@string/year_1" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/year_2_unification_berlin"
+                                style="@style/answers"
+                                android:text="@string/year_2" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/year_3_unification_berlin"
+                                style="@style/answers"
+                                android:text="@string/year_3" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/year_4_unification_berlin"
+                                style="@style/answers"
+                                android:text="@string/year_4" />
+
+                        </RadioGroup>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/questions_card"
+                android:layout_marginBottom="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/new_york" />
-            </RadioGroup>
+                    android:orientation="vertical">
 
+                    <TextView
+                        style="@style/questions"
+                        android:text="@string/china" />
 
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/bolivia" />
+                    <android.support.v7.widget.CardView style="@style/answers_card">
 
-            <LinearLayout
-                android:id="@+id/bolivia_ll"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:paddingRight="10dp"
-                android:paddingEnd="10dp"
-                android:paddingLeft="10dp"
-                android:paddingStart="10dp">
+                        <EditText
+                            android:id="@+id/china_et"
+                            style="@style/et_style"
+                            android:hint="@string/china_hint"
+                            android:maxLines="4" />
 
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/la_paz_cptl_bolivia"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/la_paz" />
+                    </android.support.v7.widget.CardView>
 
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/santa_cruz_cptl_bolivia"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/santa_cruz" />
+                </LinearLayout>
 
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/cochabamba_cptl_bolivia"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cochabamba" />
+            </android.support.v7.widget.CardView>
 
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/sucre_cptl_bolivia"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sucre" />
-            </LinearLayout>
-
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/budapest" />
-
-            <EditText
-                android:id="@+id/budapest_et"
-                style="@style/answers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/border"
-                android:hint="@string/budapest_hint"
-                android:inputType="text"
-                android:imeOptions="actionDone"
-                android:paddingTop="10dp" />
-
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/biggest_land_size" />
-
-            <RadioGroup
-                android:id="@+id/biggest_land_size_rg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:paddingRight="10dp"
-                android:paddingEnd="10dp"
-                android:paddingLeft="10dp"
-                android:paddingStart="10dp">
-
-                <RadioButton
-                    android:id="@+id/berlin_land_size"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/berlin" />
-
-                <RadioButton
-                    android:id="@+id/beijing_land_size"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/beijing" />
-
-                <RadioButton
-                    android:id="@+id/tokyo_land_size"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tokyo" />
-
-                <RadioButton
-                    android:id="@+id/mexico_city_land_size"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mexico_city" />
-
-                <RadioButton
-                    android:id="@+id/buenos_aires_land_size"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/buenos_aires" />
-            </RadioGroup>
-
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/brazil" />
-
-            <LinearLayout
-                android:id="@+id/brazil_ll"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:paddingRight="10dp"
-                android:paddingEnd="10dp"
-                android:paddingLeft="10dp"
-                android:paddingStart="10dp">
-
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/rio_cptl_brazil"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rio" />
-
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/paulo_cptl_brazil"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/paulo" />
-
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/recife_cptl_brazil"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/recife" />
-
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/brasilia_cptl_brazil"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/brasilia" />
-
-                <android.support.v7.widget.AppCompatCheckBox
-                    android:id="@+id/salvador_cptl_brazil"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/salvador" />
-            </LinearLayout>
-
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/switzerland" />
-
-            <EditText
-                android:id="@+id/switzerland_et"
-                style="@style/answers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/border"
-                android:hint="@string/switzerland_hint"
-                android:paddingTop="10dp" />
-
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/germany" />
-
-            <RadioGroup
-                android:id="@+id/unification_berlin_rg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/border"
-                android:orientation="vertical"
-                android:paddingRight="10dp"
-                android:paddingEnd="10dp"
-                android:paddingLeft="10dp"
-                android:paddingStart="10dp">
-
-                <RadioButton
-                    android:id="@+id/year_1_unification_berlin"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/year_1" />
-
-                <RadioButton
-                    android:id="@+id/year_2_unification_berlin"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/year_2" />
-
-                <RadioButton
-                    android:id="@+id/year_3_unification_berlin"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/year_3" />
-
-                <RadioButton
-                    android:id="@+id/year_4_unification_berlin"
-                    style="@style/answers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/year_4" />
-            </RadioGroup>
-
-            <TextView
-                style="@style/questions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/china" />
-
-            <EditText
-                android:id="@+id/china_et"
-                style="@style/answers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/border"
-                android:hint="@string/china_hint"
-                android:paddingTop="10dp" />
         </LinearLayout>
+
     </ScrollView>
+
 </RelativeLayout>
